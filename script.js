@@ -1,3 +1,16 @@
+function getConeAdvice() {
+  const factText = document.getElementById("factText");
+  factText.textContent = "Fetching wisdom...";
+  fetch("https://api.adviceslip.com/advice")
+    .then(res => res.json())
+    .then(data => {
+      factText.textContent = `"${data.slip.advice}"`;
+    })
+    .catch(() => {
+      factText.textContent = "No advice fetched. Just eat the ice cream.";
+    });
+}
+
 function changeFlavor() {
   const flavors = [
     "Current flavor mood: Strawberry Sunshine.",

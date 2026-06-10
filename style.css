@@ -83,6 +83,52 @@ select {
   border: 1px solid #ccc;
 }
 
+/* Interactive zone */
+.interactive-zone {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 25px auto;
+}
+
+.interactive-zone .feature-card {
+  max-width: 400px;
+  width: 100%;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-card h3 {
+  margin: 0 0 5px;
+  color: #d62828;
+}
+
+.fact-text {
+  font-style: italic;
+  color: #555;
+  min-height: 60px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .interactive-zone {
+    grid-template-columns: 1fr;
+  }
+}
+
 footer {
   text-align: center;
   padding: 20px;
